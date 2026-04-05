@@ -1,6 +1,8 @@
 'use client';
 
 import { motion, useReducedMotion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 function getHeroVariants(reduceMotion: boolean | null) {
   const instant = reduceMotion
@@ -55,6 +57,17 @@ export function HeroSection() {
       >
         운동형, 지능형, 예술형 취미를 탐색해보세요
       </motion.p>
+      <motion.div
+        className="mt-8 flex justify-center"
+        variants={item}
+      >
+        <Button asChild size="lg" className="gap-2 rounded-full px-8">
+          <a href="#explore-hobbies">
+            취미 탐색하기
+            <ArrowRight className="size-4 shrink-0" aria-hidden />
+          </a>
+        </Button>
+      </motion.div>
     </motion.section>
   );
 }

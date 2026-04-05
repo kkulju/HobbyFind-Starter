@@ -27,14 +27,12 @@ export function CategoryFilterSection({
 }: CategoryFilterSectionProps) {
   return (
     <section
-      className="border-y border-neutral-100 bg-neutral-50/80 px-4 py-8 sm:px-6"
-      aria-label="메인 카테고리 필터"
+      id="explore-hobbies"
+      className="scroll-mt-24 border-y border-neutral-100 bg-neutral-50/80 px-4 py-8 sm:px-6"
+      aria-label="취미 탐색 — 카테고리 필터"
     >
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-center text-sm font-medium text-neutral-500">
-          카테고리로 모아보기
-        </h2>
-        <div className="mt-4 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
           {FILTER_KEYS.map((key) => {
             const label = match(key)
               .with('all', () => '전체')

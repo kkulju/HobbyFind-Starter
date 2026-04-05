@@ -27,8 +27,11 @@ export function HobbyCard({ hobby, className }: HobbyCardProps) {
           sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
         />
       </div>
-      <CardContent className="p-4">
+      <CardContent className="space-y-1.5 p-4">
         <p className="text-lg font-medium text-neutral-900">{hobby.name}</p>
+        <p className="line-clamp-2 text-sm leading-snug text-neutral-600">
+          {hobby.description}
+        </p>
       </CardContent>
     </Card>
   );
